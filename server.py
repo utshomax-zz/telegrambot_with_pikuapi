@@ -59,13 +59,13 @@ def make_reply(msg):
                     reply="Sorry! Something went wrong! Please feel free to report a bug by typing /reportbug"    
            
         else:
-            print(msg)
+            #print(msg)
             res=cmd.getReply(msg)
             try:
                 reply=res['reply']
             except:
                 reply="Sorry! Something went wrong! Please feel free to report a bug by typing /reportbug"
-            print(reply)
+            #print(reply)
            # reply='Hey {}! You are not registered yet. Please register by command /register'.format(user_name)
     return reply
 

@@ -18,9 +18,7 @@ class telegram_chatbot():
             r = requests.get(url)
             return json.loads(r.content)
         except:
-            print('Refiused')
             sleep(5)
-            print('ok now')
     def send_message(self, msg, chat_id):
         url = self.base + "sendMessage?chat_id={}&text={}".format(chat_id, msg)
         if msg is not None:
@@ -28,9 +26,9 @@ class telegram_chatbot():
                 requests.get(url)
             
             except:
-                print('Refiused')
+                #print('Refiused')
                 time.sleep(5)
-                print('ok now')
+                #print('ok now')
 
     def read_token_from_config_file(self, config):
         parser = cfg.ConfigParser()
