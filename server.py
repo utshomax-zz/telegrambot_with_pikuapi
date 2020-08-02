@@ -2,6 +2,7 @@
 from bot import telegram_chatbot
 from commands import command
 import sqlite3
+from time import sleep
 
 #veriables
 bot = telegram_chatbot("config.cfg")
@@ -105,13 +106,16 @@ def user_reg(u_id,u_name,u_username,u_roll,u_branch):
 
 #updater for listioning continuously to user
 while True:
-
+    updates=None
     try:
         updates = bot.get_updates(offset=update_id)
-        updates = updates["result"]
+        if updates!=None:
+            updates = updates["result"]
+        else:
+            errorthrowingfunction("haha")
     except:
         sleep(30)
-            
+        bot.send_message("Server isuue. It will be fixed soon", 988155186)
 
     if updates:
         for item in updates:
