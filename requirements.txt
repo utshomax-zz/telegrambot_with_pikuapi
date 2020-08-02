@@ -3,12 +3,11 @@ certifi==2020.6.20
 cffi==1.14.0
 chardet==3.0.4
 cryptography==2.9.2
-idna @ file:///tmp/build/80754af9/idna_1593446292537/work
-pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
-pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
-PySocks @ file:///C:/ci/pysocks_1594394709107/work
-requests @ file:///tmp/build/80754af9/requests_1592841827918/work
-six==1.15.0
+idna
+pycparser
+pyOpenSSL
+PySocks
+requests
 urllib3==1.25.9
 win-inet-pton==1.1.0
 wincertstore==0.2
